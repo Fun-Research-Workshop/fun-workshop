@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
+    <link rel="stylesheet" type="text/css" media="all" href="assets/main.css" />
+    <meta name="description" content="Fun Workshop - A community-driven workshop series at XJTLU">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta name="KeyWords" content="Workshop, XJTLU, Fun">
+    <title>Fun Workshop</title>
+    <style>
+        html:not([lang="zh"]) .lang-zh {
+            display: none !important;
+        }
+
+        html[lang="zh"] .lang-en {
+            display: none !important;
+        }
+
+        .seasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            margin: 40px auto;
+            max-width: 900px;
+        }
+
+        .season-card {
+            border: 2px solid #52739e;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+            background: #ffffff;
+        }
+
+        .season-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(81, 115, 158, 0.2);
+        }
+
+        .season-card h3 {
+            color: #52739e;
+            margin: 16px 0 8px;
+            font-size: 1.5em;
+        }
+
+        .season-card p {
+            color: #505050;
+            font-size: 1em;
+            margin: 8px auto;
+        }
+
+        .season-card .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.875em;
+            margin-top: 8px;
+        }
+
+        .tag-active {
+            background: #52739e;
+            color: #fafafa;
+        }
+
+        .tag-upcoming {
+            background: #b8860b;
+            color: #fafafa;
+        }
+
+        .season-card a {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 8px 24px;
+            background: #52739e;
+            color: #fafafa;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .season-card a:hover {
+            background: #b2132e;
+        }
+
+        .intro-section {
+            max-width: 800px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .intro-section p {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .past-seasons {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .past-seasons h2 {
+            color: #813c54;
+            margin-bottom: 24px;
+        }
+    </style>
+    <script>
+        function toggleLanguage(event) {
+            if (event) event.preventDefault();
+            const html = document.documentElement;
+            if (html.getAttribute('lang') === 'zh') {
+                html.setAttribute('lang', 'en');
+                localStorage.setItem('lang', 'en');
+            } else {
+                html.setAttribute('lang', 'zh');
+                localStorage.setItem('lang', 'zh');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('lang');
+            if (savedLang) {
+                document.documentElement.setAttribute('lang', savedLang);
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="banner">
+        <img src="assets/banner.jpg" alt="Fun Workshop Banner">
+        <div class="top-left">
+            <span class="title1">Fun</span><span class="title2">Workshop</span>
+        </div>
+        <div class="bottom-right">
+            <span class="lang-en">XJTLU, Suzhou</span>
+            <span class="lang-zh">西交利物浦大学，苏州</span>
+        </div>
+    </div>
+
+    <table class="navigation">
+        <tr>
+            <td class="navigation">
+                <a class="nav-link current" title="Home" href="#home">
+                    <span class="lang-en">Home</span>
+                    <span class="lang-zh">首页</span>
+                </a>
+            </td>
+            <td class="navigation">
+                <a class="nav-link" title="Toggle Language" href="#" onclick="toggleLanguage(event)">中 / En</a>
+            </td>
+        </tr>
+    </table>
+
+    <div class="intro-section">
+        <h2 class="lang-en">About Fun Workshop</h2>
+        <h2 class="lang-zh">关于 Fun Workshop</h2>
+
+        <div class="lang-en">
+            <p>
+                Fun Workshop is a community-driven workshop series at Xi'an Jiaotong-Liverpool University (XJTLU).
+                We gather people who share interesting projects, ideas, and skills.
+                It's a space for learning, sharing, and connecting across disciplines.
+            </p>
+            <p>
+                Each season features its own program of talks, workshops, and social events.
+                Browse below to explore past and current seasons!
+            </p>
+        </div>
+
+        <div class="lang-zh">
+            <p>
+                Fun Workshop 是西交利物浦大学（XJTLU）的一个社区驱动的工作坊系列。
+                我们聚集分享有趣项目、想法和技能的人们。
+                这是一个跨学科学习、分享和连接的空间。
+            </p>
+            <p>
+                每个季节都有自己的分享日程、工作坊和社交活动。
+                向下浏览，探索过去和当前的季节！
+            </p>
+        </div>
+    </div>
+
+    <div class="seasons-grid">
+        <div class="season-card">
+            <h3>🌸 Spring 2026</h3>
+            <p class="lang-en">March - May, 2026</p>
+            <p class="lang-zh">2026年3月 - 5月</p>
+            <p class="lang-en">XJTLU, Suzhou</p>
+            <p class="lang-zh">西交利物浦大学，苏州</p>
+            <span class="tag tag-active">Active</span>
+            <br>
+            <a href="https://fun-research-workshop.github.io/fun-workshop-2026-spring/">Visit Season Site →</a>
+        </div>
+
+        <!-- Future seasons placeholder -->
+        <!-- <div class="season-card">
+            <h3>❄️ Winter 2026</h3>
+            <p class="lang-en">Coming soon...</p>
+            <span class="tag tag-upcoming">Upcoming</span>
+        </div> -->
+    </div>
+
+    <footer>
+        <span class="lang-en">&copy; Shiyao Zhang &nbsp;|&nbsp; <a href="https://github.com/Fun-Research-Workshop/fun-workshop">View on GitHub</a></span>
+        <span class="lang-zh">&copy; Shiyao Zhang &nbsp;|&nbsp; <a href="https://github.com/Fun-Research-Workshop/fun-workshop">在 GitHub 上查看</a></span>
+    </footer>
+
+</body>
+
+</html>
