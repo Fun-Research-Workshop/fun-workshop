@@ -1,0 +1,19 @@
+# Fun Workshop
+
+> Core portal and repository index for the Fun Workshop initiative.
+
+Fun Workshop is a community-driven workshop series at Xi'an Jiaotong-Liverpool University (XJTLU). This repository serves as the entrypoint index. It coordinates seasonal workshops including Spring 2026 and Summer 2026.
+
+## Core Information Index
+- [Main Site Portal](index.html) - Entry landing page listing all workshop seasons.
+- [Project Readme](README.md) - Overview of the initiative in both English and Chinese.
+
+## Seasons & Sub-Repositories
+- [Spring 2026 Website](https://fun-research-workshop.github.io/fun-workshop-2026-spring/) - Program, speakers, and join forms for Spring 2026.
+- [Spring 2026 Repository](https://github.com/Fun-Research-Workshop/fun-workshop-2026-spring) - Source code and markdown components for Spring 2026.
+- [Summer 2026 Website](https://fun-research-workshop.github.io/fun-workshop-2026-summer/) - Program, letters, FAQ, syllabus, and join forms for Summer 2026.
+- [Summer 2026 Repository](https://github.com/Fun-Research-Workshop/fun-workshop-2026-summer) - Source code and markdown components for Summer 2026.
+
+## Key Metadata
+- **Venue**: Taicang Campus, Xi'an Jiaotong-Liverpool University, Suzhou, China.
+- **Coordinator**: Shiyao Zhang (shiyao.zhang14@student.xjtlu.edu.cn).
